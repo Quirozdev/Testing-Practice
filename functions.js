@@ -67,9 +67,6 @@ function getOffSetLetterCharCode(letterCharCode, shiftFactor) {
     // didnt overflow the last lowercase letter char code, if thats the case
     // it is added 97
     return result < 97 ? result + 97 : result;
-    // 97 + (119 + 5) % (97 + 26) = 98
-    // 97 + (97 + 5) % (97 + 26) = 98
-    // 97 + ((119 + 5)) % (119 - 1) = 97 + (124 % 118) = 97 + 6 = 103
   } else {
     // 91 = 65 (character code of the first uppercase letter) + 26 (total uppercase letters)
     const result = (letterCharCode + cleanShiftFactor) % 91;
